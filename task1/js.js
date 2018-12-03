@@ -1,4 +1,4 @@
-const YEAR = 365;
+﻿const DAYS_PER_YEAR = 365;
 
 var fullName = prompt('Введите свою Фамилию');
 var name = prompt('Введите свое имя');
@@ -14,8 +14,8 @@ if(gen == true){
   gender = 'Женский';
 }
 
-if(isNaN(parseInt(age)) || !isNaN(parseInt(fullName)) || !isNaN(parseInt(name)) ||
-!isNaN(parseInt(secondName)) ) {
+if(isNaN(parseInt(age)) || !isNaN(fullName) || !isNaN(name) ||
+!isNaN(secondName) ) {
     alert('Вы должны правильно ввести данные');
 }else {
   if(age < 25) {
@@ -38,7 +38,7 @@ if(isNaN(parseInt(age)) || !isNaN(parseInt(fullName)) || !isNaN(parseInt(name)) 
 
   alert('ваше ФИО: ' + fullName + ' ' + name + ' ' + secondName + '\n'
   + 'ваш возраст в годах: ' + age + '\n'
-  + 'ваш возраст в днях: ' + YEAR * age + '\n'
+  + 'ваш возраст в днях: ' + DAYS_PER_YEAR * age + '\n'
   + field4 + '\n' + gender + '\n' + retirement);
 
 }
