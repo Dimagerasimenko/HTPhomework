@@ -1,4 +1,4 @@
-﻿/*const DAYS_PER_YEAR = 365;
+﻿const DAYS_PER_YEAR = 365;
 
 var datasPerson = {
   fullName: prompt('Введите свою Фамилию'),
@@ -61,38 +61,35 @@ var sumNumberAandB = function (numberA, numberB) {
         var c = numberA - numberB;
         for (var i = 0; i <= c; i++){
             sum = sum + numberB + i;
-        }
+        } return alert('Total: ' + sum + ' |number of symbols: ' + i);
+    } else {
+        alert('Ошибка: Число А должно быть больше числа В');
     }
 
-    return alert('Total: ' + sum + ' |number of symbols: ' + i);
 }
 
-console.log(sumNumberAandB(numberA, numberB));*/
+console.log(sumNumberAandB(numberA, numberB));
 
-var quantityA = prompt('Введите  N - количество элементов: ');
+
+
+var N = prompt('Введите  N - количество элементов: ');
 var array = [];
-var object1 = {};
-var nubmerUser;
 
-var dataInput = function (quantityA) {
 
-    for (var i = 0; i < quantityA; i++) {
-        nubmerUser = prompt('Элемент № ');
-        array[i] = nubmerUser; // записали все введенные числа в массив
-        object1[nubmerUser] = 0;
-
-        for (var j = 0; j < array.length; j++) {
-            var number = array[j];
-            if (number in object1) {
-                object1[nubmerUser]++;
-            }
-
-        }
+var dataInput = function (N) {
+    for (var i = 0; i < N; i++) {
+        array[i] = prompt('Элемент № ');
+        // записали все введенные числа в массив
     }
 
+    var a = prompt('введите искомый элемент');
+    var count = 0;
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] == a) {
+            count++;
+        }
+    }
+    return [alert('Совпадение числа ' + a + ' равно: ' + count), alert('Введенные значения: ' + array)];
+    }
 
-
-    return [console.log(object1), console.log(array)];
-}
-
-dataInput(quantityA);
+dataInput(N);
